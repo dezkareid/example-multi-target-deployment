@@ -7,7 +7,7 @@
   <title>multi-target-demo</title>
   <script>
     window.addEventListener('load', () => {
-      var mainElement = document.body.getElementsByTagName('main')[0]
+      var mainElement = document.body.getElementsById('app-container')
   
       var scriptNoModule = document.createElement('script')
       scriptNoModule.async = true
@@ -21,11 +21,11 @@
         
         scriptNoModule.setAttribute('noModule', true)
         
-        mainElement.parentNode.insertBefore(scriptNoModule, mainElement.nextSibling);
-        mainElement.parentNode.insertBefore(scriptModule, mainElement.nextSibling);
+        mainElement.parentNode.insertBefore(scriptNoModule, mainElement.nextSibling)
+        mainElement.parentNode.insertBefore(scriptModule, mainElement.nextSibling)
   
       } else {
-        mainElement.parentNode.insertBefore(scriptNoModule, mainElement.nextSibling);
+        mainElement.parentNode.insertBefore(scriptNoModule, mainElement.nextSibling)
       }
     })
   </script>
